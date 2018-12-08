@@ -2,6 +2,11 @@ body {
     background-color:#FFF1D2;
 }
 
+b.name {
+    vertical-align: bottom;
+}
+
 label.handle {
     color: #DCDCDC;
+    vertical-align: middle;
 }
