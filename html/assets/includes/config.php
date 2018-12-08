@@ -10,4 +10,8 @@
   // google
   $client_id = '258775497785-n1gqf6u0q55et082h1roo46v6ci8c5up.apps.googleusercontent.com';
   $client_secret = $sec_client_secret;
+
+  // site basics
+  $conf_name = 'Yeetr'
+  $conf_refresh = false;
 ?>
