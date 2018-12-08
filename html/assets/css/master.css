@@ -3,10 +3,9 @@ body {
 }
 
 b.name {
-    vertical-align: middle;
+    color: #FFFFFF;
 }
 
 label.handle {
     color: #DCDCDC;
-    vertical-align: middle;
 }

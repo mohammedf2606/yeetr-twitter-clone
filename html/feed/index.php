@@ -14,7 +14,7 @@
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
     <p>
-        <img src="<?php echo $user['pic']; ?>">
+        <img style="vertical-align:middle" src="<?php echo $user['pic']; ?>">
         <b class = "name"><?php echo $user['name']; ?></b>
         <label class = "handle"> Handle </label>
     </p>
