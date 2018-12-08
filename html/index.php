@@ -37,7 +37,6 @@
             var id_token = googleUser.getAuthResponse().id_token;
             xhr.send('token=' + id_token);
             console.log("ID Token: " + id_token);
-            window.location.replace("/feed");
         };
     </script>
 
