@@ -5,7 +5,7 @@
       die("{\"status\":0,\"content\":\"Not authorised\"}");
     }
     $user = getUserBySID();
-    $uid = $user['uid'];
+    $uid = $user['id'];
     $body = $db->real_escape_string($_GET['body']);
     if (strlen($body) > 0) {
       $yid = '';
