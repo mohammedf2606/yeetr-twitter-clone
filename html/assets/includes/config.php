@@ -16,6 +16,10 @@
   $conf_refresh = false;
 
   // basic function
+  function isLoggedIn() {
+    session_start();
+    return validToken($_SESSION['sid']);
+  }
   function validToken($t) {
     global $db;
     $token = $db->real_escape_string($t);
