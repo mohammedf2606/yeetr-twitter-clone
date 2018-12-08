@@ -13,10 +13,11 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <p> </p>
-    <img src="<?php echo $user['pic']; ?>">
-    <b class = "name"><?php echo $user['name']; ?></b>
-    <label class = "handle"> Handle </label>
+    <p>
+        <img src="<?php echo $user['pic']; ?>">
+        <b class = "name"><?php echo $user['name']; ?></b>
+        <label class = "handle"> Handle </label>
+    </p>
     <script>
         var timeSent = 0;
         var currentTime = 0;
