@@ -2,3 +2,4 @@
 *.class
 .idea/
 cred.json
+html/phpmyadmin
