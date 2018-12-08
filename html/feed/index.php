@@ -44,7 +44,7 @@
         };
 
         function onFailure(googleUser) {
-            window.location.replace("yeetr.me");
+            window.location.replace("..");
         }
         
     </script>
