@@ -14,6 +14,10 @@ label.handle {
     color: #A9A9A9;
 }
 
+div.a {
+    margin: 0 auto;
+}
+
 label.time {
     color: #A9A9A9;
 }
