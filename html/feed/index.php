@@ -9,10 +9,7 @@
  <html>
   <head>
     <title>Feed - <?php echo $conf_name; ?></title>
-    <link type="text/css" rel="stylesheet" href="assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
-    <meta name="google-signin-scope" content="profile email">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="<?php echo $client_id; ?>">
+    <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
