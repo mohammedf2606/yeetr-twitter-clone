@@ -17,7 +17,7 @@
 
   // basic function
   function validToken($t) {
-    global $db
+    global $db;
     $token = $db->real_escape_string($t);
     $q = $db->query("SELECT * FROM sessions WHERE sid='$token' AND status=1");
     return mysqli_num_rows($q) > 0;
