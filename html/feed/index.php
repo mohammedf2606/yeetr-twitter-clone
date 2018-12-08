@@ -37,12 +37,13 @@
             document.body.appendChild(img);
         }
 
+
         // Sign the user in, and then retrieve their ID.
         auth2.signIn().then(function() {
             var user = auth2.currentUser.get()
             console.log(user);
             console.log(user.getId());
-            show_image(user.getImageUrl(), 96, 96, user.getGivenName());
+            show_image(user.w3.Paa, 96, 96, user.getGivenName());
         });
     });
     </script>
