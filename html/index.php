@@ -3,7 +3,7 @@
 
   if (isLoggedIn()) {
     header('Location: http://yeetr.me/feed');
-    exit()
+    die();
   }
 ?>
  <html>
