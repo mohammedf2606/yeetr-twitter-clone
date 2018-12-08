@@ -12,7 +12,8 @@ body {
 
 <body>
 <label>hello</label>
-<img src="logo1.gif" alt="YEET">
+<img src="/assests/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
+
 <!--
 <a href="https://google.com"><img src="logo1.gif" alt="YEET"></a>
 -->
