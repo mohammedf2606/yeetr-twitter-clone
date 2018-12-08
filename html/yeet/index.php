@@ -38,7 +38,7 @@
                 data: "body=" + escape(textInput),
                 success: function(data) {
                     alert('Yeeted this ;-)');
-                    window.location.replace("http://yeetr.me/feed"); 
+                    window.location.replace("../feed"); 
                 }
             });
             } else {
