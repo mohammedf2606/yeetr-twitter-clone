@@ -23,7 +23,7 @@
 
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
-    <button type="button" onclick="submitYeet">YEET!</button>
+    <button type="button" onclick="submitYeet()">YEET!</button>
 
     <script>
 
