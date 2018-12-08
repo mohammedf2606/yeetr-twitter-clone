@@ -12,7 +12,7 @@
   $client_secret = $sec_client_secret;
 
   // site basics
-  $conf_name = 'Yeetr';
+  $conf_name = 'YEeTr';
   $conf_refresh = false;
 
   // basic function
