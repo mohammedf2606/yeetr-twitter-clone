@@ -13,18 +13,35 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <p>
+    <center>
+        <button id = "newYeet" onclick = "goToYeet()"> New Yeet :) </button>
+    </center>
+    <script>
+        function goToYeet() {
+            window.location.replace("../yeet");
+        }
+    </script>
+    <p id = "feed">
         <div>
             <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
             <b class = "name"><?php echo $user['name']; ?></b>
             <label class = "handle"> Handle </label>
+            <label class = "time"> Time </label>
         </div>
-        <label class = "yeet"> Yeet </label>
-    </p>
+        <label class = "yeet"> Yeet </label></p>
     <script>
         var timeSent = 0;
         var currentTime = 0;
         var timeSince = currentTime - timeSent;
+        // for each (var yeet in listOfYeets) {
+        //     document.getElementById('feed').write(
+        //         <div>
+        //             <img style="vertical-align:top" src=" <?php echo $user['pic']; ?>">
+        //             <b class = "name"><?php echo $user['name']; ?></b>
+        //             <label class = "handle"> Handle </label>
+        //         </div>
+        //     <label class = "yeet"> Yeet </label>);
+        // }
     </script>
   </body>
 </html>
