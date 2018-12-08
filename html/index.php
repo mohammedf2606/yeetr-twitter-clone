@@ -1,4 +1,4 @@
 <?php
   echo("Test");
-  echo("\nHello Fahim was here!");
+  echo nl2br("\nHello Fahim was here!");
 ?>
