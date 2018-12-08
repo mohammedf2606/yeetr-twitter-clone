@@ -1,5 +1,6 @@
 <?php
   include("secret.php");
+  // basic database connection
   $db_username = 'hackkings'; // MySQL username
   $db_password = $sec_db_password; // MySQL password, pull from secret.php so sensitive data won't be published.
   $db_hostname = 'localhost'; // MySQL host
