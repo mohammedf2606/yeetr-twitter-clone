@@ -20,7 +20,7 @@
     <img src="<?php echo $user['pic']; ?>">
     <b class="name"><?php echo $user['name']; ?></b>
     <label class="handle">Handle</label>
-
+    <p></p>
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
     <button id="yeet" type="button" onclick="submitYeet()">YEET!</button>
