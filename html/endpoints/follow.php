@@ -1,12 +1,12 @@
 <?php
   include("../assets/includes/config.php");
-  if (isset($_POST['target'])) {
+  if (isset($_GET['target'])) {
     if (!isLoggedIn()) {
       die("{\"status\":0,\"content\":\"Not authorised\"}");
     }
     $user = getUserBySID();
     $uid = $user['id'];
-    $tid = $db->real_escape_string($_POST['target']);
+    $tid = $db->real_escape_string($_GET['target']);
     if ($uid == $tid) {
       die("{\"status\":0,\"content\":\"You can't follow yourself\"}");
     }
