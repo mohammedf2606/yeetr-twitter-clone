@@ -4,6 +4,7 @@
     header('Location: http://yeetr.me/');
     die();
   }
+  $user = getUserBySID();
 ?>
  <html>
   <head>
@@ -15,8 +16,8 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <img src="">
-    <b> Full Name </b>
+    <img src="<?php echo $user['pic']; ?>">
+    <b><?php echo $user['name']; ?></b>
     <h1> Handle </h1>
     <script>
         var timeSent = 0;
