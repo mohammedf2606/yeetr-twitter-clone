@@ -51,6 +51,7 @@
     $user['bio'] = $user_row['bio'];
     $user['name'] = $user_row['name'];
     $user['last'] = $user_row['last_seen'];
+    $user['id'] = $uid;
     return $user;
   }
 ?>
