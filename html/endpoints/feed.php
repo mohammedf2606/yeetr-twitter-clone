@@ -7,7 +7,7 @@
   $uid = $user['id'];
   $follows = $db->query("SELECT * FROM follows WHERE user1='$uid'") or die("{\"status\":0,\"content\":\"Failed to fetch following\"}");
   $following = array();
-  array_push($uid);
+  array_push($following, $uid);
   while ($follow = $follows->fetch_assoc()) {
     array_push($following, strval($follow['user2']));
   }
