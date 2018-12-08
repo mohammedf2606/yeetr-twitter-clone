@@ -24,8 +24,10 @@
     <p id = "feed">
         <table>
             <tc>
+                <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">\
+            </tc>
+            <tc>
                 <tr>
-                    <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
                     <b class = "name"><?php echo $user['name']; ?></b>
                     <label class = "handle"> Handle </label>
                     <label class = "time"> Time </label>
