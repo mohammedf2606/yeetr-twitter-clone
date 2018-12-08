@@ -15,7 +15,7 @@
     } else {
       $follow_check = $db->query("SELECT * FROM follows WHERE user1='$uid' AND user2='$tid'") or die("{\"status\":0,\"content\":\"Following failed2\"}");
       if (mysqli_num_rows($follow_check) == 0) {
-        $db->query("INSERT INTO follows (user1, user2) VALUES ('$uid', $tid')") or die("{\"status\":0,\"content\":\"Following failed3\"}");
+        $db->query("INSERT INTO follows (user1, user2) VALUES ('$uid', '$tid')") or die("{\"status\":0,\"content\":\"Following failed3\"}");
         die("{\"status\":1,\"content\":\"Followed\"}");
       } else {
         $follow = $follow_check->fetch_assoc();
