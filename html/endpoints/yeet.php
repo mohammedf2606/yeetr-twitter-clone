@@ -6,7 +6,7 @@
     }
     $user = getUserBySID();
     $uid = $user['uid'];
-    $body = $db->real_escape_string($_POST['body']);
+    $body = $db->real_escape_string($_GET['body']);
     if (strlen($body) > 0) {
       $yid = '';
       while (true) {
