@@ -37,7 +37,7 @@
                 url: "../endpoints/yeet.php",
                 data: "body=" + escape(textInput),
                 success: function(data) {
-                    window.top.close(); 
+                    window.location.replace("http://yeetr.me/feed"); 
                 }
             });
             } else {
