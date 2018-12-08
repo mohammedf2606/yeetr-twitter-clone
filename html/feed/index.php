@@ -14,9 +14,11 @@
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
     <p>
-        <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
-        <b class = "name"><?php echo $user['name']; ?></b>
-        <label class = "handle"> Handle </label>
+        <div>
+            <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
+            <b class = "name"><?php echo $user['name']; ?></b>
+            <label class = "handle"> Handle </label>
+        </div>
         <label class = "yeet"> Yeet </label>
     </p>
     <script>
