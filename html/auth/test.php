@@ -3,7 +3,7 @@
   session_start();
   echo $_SESSION['sid'];
   $token = $db->real_escape_string($_SESSION['sid']);
-  $q = $db->query("SELECT * FROM sessions WHERE sid='$token' AND status=1");
+  $q = $db->query("SELECT * FROM sessions WHERE sid='$token' AND status=1") or die("E");
   echo $q;
   echo mysqli_num_rows($q) > 0;
 ?>
