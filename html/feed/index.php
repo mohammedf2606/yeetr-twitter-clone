@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <a href="www.yeetr.com/feed"><img src="../assets/img/logo.gif" alt="YEET"></a>
+    <a href="http://www.yeetr.me/feed"><img src="../assets/img/logo.gif" alt="YEET"></a>
     <p></p>
 
     <script>
