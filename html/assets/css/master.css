@@ -14,6 +14,10 @@ label.handle {
     color: #DCDCDC;
 }
 
+label.seperator {
+    vertical-align: text-top;
+}
+
 label.time {
     color: #DCDCDC;
 }
