@@ -12,40 +12,18 @@
 
 <body>
 
-    <div class="g-signin2" data-onsuccess="onSignIn" data-onfailure ="onFailure" style="display: none;"></div>
-
     <script>
-        function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            var profile = googleUser.getBasicProfile();
-            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        gapi.auth2.init()
+        if (auth2.isSignedIn.get()) {
+            var profile = auth2.currentUser.get().getBasicProfile();
+            console.log('ID: ' + profile.getId());
             console.log('Full Name: ' + profile.getName());
             console.log('Given Name: ' + profile.getGivenName());
             console.log('Family Name: ' + profile.getFamilyName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
-
-            // The ID token you need to pass to your backend:
-            var id_token = googleUser.getAuthResponse().id_token;
-            console.log("ID Token: " + id_token);
-
-            function show_image(src, width, height, alt) {
-                var img = document.createElement("img");
-                img.src = src;
-                img.width = width;
-                img.height = height;
-                img.alt = alt;
-
-                // This next line will just add it to the <body> tag
-                document.body.appendChild(img);
-            }
-            show_image(profile.getImageUrl(), 96, 96, profile.getGivenName())
-            
-        };
-
-        function onFailure(googleUser) {
-            console.log('No user');
-            window.location.replace("..");
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        } else {
+            console.log('Fail');
         }
         
     </script>
