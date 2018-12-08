@@ -1,4 +1,2 @@
-# Ignores all class files
-*.class
 html/phpmyadmin
 html/assets/includes/secret.php
