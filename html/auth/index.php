@@ -13,7 +13,8 @@
       $timestamp = strval(time());
       if (mysqli_num_rows($user_check) == 0) {
         $name = $db->real_escape_string(strval($payload['name']));
-        $db->query("INSERT INTO users (uid, name, bio, web, reg, last_seen) VALUES ('$user_id', '$name', 'I\'m new to Yeetr!', '', $timestamp, $timestamp)") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
+        $pp = $db->real_escape_string(strval($payload['picture']));
+        $db->query("INSERT INTO users (uid, name, bio, web, reg, last_seen, pic) VALUES ('$user_id', '$name', 'I\'m new to Yeetr!', '', $timestamp, $timestamp, '$pp')") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
       } else {
         $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$user_id'") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
       }
