@@ -23,12 +23,12 @@
 
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
-    <button type="button" onclick="submitYeet()">YEET!</button>
+    <button id="yeet" type="button" onclick="submitYeet()">YEET!</button>
 
     <script>
 
         function submitYeet() {
-            alert('f');
+            document.getElementById("yeet").disabled = true;
             var textInput = $('#yeetInput').val();
             if (textInput != "") {
                 console.log(textInput);
@@ -37,12 +37,14 @@
                 url: "../endpoints/yeet.php",
                 data: "body=" + escape(textInput),
                 success: function(data) {
+                    alert('Yeeted this ;-)');
                     window.location.replace("http://yeetr.me/feed"); 
                 }
             });
             } else {
                 console.log("no input found :(");
             }
+            document.getElementById("yeet").disabled = false;
         }
     </script>
 
