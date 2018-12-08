@@ -13,7 +13,7 @@
 
 <body>
 
-    <img src="/assests/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
+    <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
 
 <!--
 <a href="https://google.com"><img src="logo1.gif" alt="YEET"></a>
