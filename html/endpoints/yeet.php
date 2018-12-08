@@ -11,14 +11,14 @@
       $yid = '';
       while (true) {
         $yid = generateRandomString(16);
-        $yeet_check = $db->query("SELECT * FROM yeets WHERE yid='$yid'") or die("{\"status\":0,\"content\":\"Yeeting failed\"}");
+        $yeet_check = $db->query("SELECT * FROM yeets WHERE yid='$yid'") or die("{\"status\":0,\"content\":\"Yeeting failed0\"}");
         if (mysqli_num_rows($yeet_check) == 0) {
           break;
         }
       }
       $timestamp = strval(time());
-      $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Yeeting failed\"}");
-      $db->query("INSERT INTO yeets (yid, uid, time, body) VALUES ('$yid', '$uid', $timestamp, '$body')") or die("{\"status\":0,\"content\":\"Yeeting failed\"}");
+      $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Yeeting failed1\"}");
+      $db->query("INSERT INTO yeets (yid, uid, time, body) VALUES ('$yid', '$uid', $timestamp, '$body')") or die("{\"status\":0,\"content\":\"Yeeting failed2\"}");
       die("{\"status\":1,\"content\":\"$yid\"}");
     } else {
       die("{\"status\":0,\"content\":\"Empty content\"}");
