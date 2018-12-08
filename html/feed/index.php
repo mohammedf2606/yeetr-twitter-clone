@@ -41,8 +41,7 @@
         function show_name(user){
             var name = document.createElement("label");
             name.innerHTML = user.w3.ig;
-            document.appendChild(name);
-
+            document.body.appendChild(name);
         }
 
         // Sign the user in, and then retrieve their ID.
