@@ -17,7 +17,8 @@
 </head>
 
 <body>
-    <a href="yeetr.com/feed"><img src="../assets/img/logo.gif" alt="YEET"></a>
+    <a href="www.yeetr.com/feed"><img src="../assets/img/logo.gif" alt="YEET"></a>
+    <p></p>
 
     <script>
         gapi.load('auth2', function() {
