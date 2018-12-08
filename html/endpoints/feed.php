@@ -11,6 +11,7 @@
   while ($follow = $follows->fetch_assoc()) {
     array_push($following, strval($follow['user2']));
   }
+  $user_cache = array();
   $query = "('".implode("','", $following)."')";
   $yeets = $db->query("SELECT * FROM yeets WHERE uid IN $query ORDER BY time DESC") or die("{\"status\":0,\"content\":\"Failed to fetch yeets\"}");
   $body = array();
@@ -20,7 +21,17 @@
   while ($yeet = $yeets->fetch_assoc()) {
     $new_yeet = array();
     $new_yeet['id'] = $yeet['yid'];
-    $new_yeet['user'] = $yeet['uid']; // we could use the user profile here too?
+    $id = $yeet['uid'];
+    if (!array_key_exists($id, $user_cache)) {
+      $yeeters = $db->query("SELECT * FROM users WHERE uid='$id'");
+      $yeeter = $yeeters->fetch_assoc();
+      $new_yeeter = array();
+      $new_yeeter['id'] = $id;
+      $new_yeeter['pic'] = $yeeter['pic'];
+      $new_yeeter['name'] = $yeeter['name'];
+      $user_cache[$id] = $new_yeeter;
+    }
+    $new_yeet['user'] = $user_cache[$id]; // we could use the user profile here too?
     $new_yeet['time'] = $time - intval($yeet['time']);
     $new_yeet['body'] = $yeet['body'];
     array_push($body['content'], $new_yeet);
