@@ -1,12 +1,12 @@
 <?php
   include("../assets/includes/config.php");
-  if (isset($_POST['target'])) {
+  if (isset($_GET['target'])) {
     if (!isLoggedIn()) {
       die("{\"status\":0,\"content\":\"Not authorised\"}");
     }
     $user = getUserBySID();
     $uid = $user['id'];
-    $tid = $db->real_escape_string($_POST['target']);
+    $tid = $db->real_escape_string($_GET['target']);
     $timestamp = strval(time());
     $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Following failed\"}");
     $user_check = $db->query("SELECT * FROM users WHERE uid='$tid'") or die("{\"status\":0,\"content\":\"Following failed\"}");
