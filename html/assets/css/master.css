@@ -3,10 +3,13 @@ body {
 }
 
 b.name {
-    vertical-align: middle;
+    color: #000000;
+}
+
+label.yeet {
+    vertical-align: bottom;
 }
 
 label.handle {
     color: #DCDCDC;
-    vertical-align: middle;
 }

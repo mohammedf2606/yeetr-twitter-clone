@@ -9,6 +9,7 @@
 
 <head>
     <title>Send a Yeet - <?php echo $conf_name; ?></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
 
 </head>
@@ -22,26 +23,22 @@
 
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
-    <button type="button" onclick="submitYeet()">YEET!</button>
+    <button type="button" onclick="submitYeet">YEET!</button>
 
     <script>
-        function post(text){
-            var form = document.createElement("form");
-            form.setAttribute("method", "post");
-            form.setAttribute("action", "http://www.yeetr.me/endpoints/yeet.php");
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("value", text);
-            form.appendChild(hiddenField);
-            
-            document.body.appendChild(form);
-            form.submit();
-        }
+
         function submitYeet() {
-            var textInput = document.getElementById("yeetInput").value;
+            var textInput = $('#yeetInput').val();
             if (textInput != "") {
                 console.log(textInput);
-                post(textInput);
+                $.ajax({
+                type: "POST",
+                url: "../endpoints/yeet.php",
+                data: "body=" + escape(textInput),
+                success: function(data) {
+                    close()  
+                }
+            });
             } else {
                 console.log("no input found :(");
             }
