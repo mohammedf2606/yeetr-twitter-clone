@@ -35,4 +35,22 @@
     }
     return $randomString;
   }
+  function getUserBySID() {
+    global $db;
+    $user = array();
+    $token = $db->real_escape_string($_SESSION['sid']);
+    if (!isLoggedIn()) {
+      return $user; // in theory, this should never be used
+    }
+    $session_rows = $db->query("SELECT * FROM sessions WHERE sid='$token'");
+    $session_row = $session_rows->fetch_assoc();
+    $uid = strval($session_row['uid']);
+    $user_rows = $db->query("SELECT * FROM users WHERE uid='$uid'");
+    $user_row = $user_rows->fetch_assoc();
+    $user['pic'] = $user_row['pic'];
+    $user['bio'] = $user_row['bio'];
+    $user['name'] = $user_row['name'];
+    $user['last'] = $user_row['last_seen'];
+    return $user;
+  }
 ?>
