@@ -1,2 +1,3 @@
 # Ignores all class files
 *.class
+.idea/
