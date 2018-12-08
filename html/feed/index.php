@@ -30,6 +30,8 @@
         </div>
         <label class = "yeet"> Yeet </label></p>
     <script>
+        var top = require("../endpoints/feed.php");
+        console.log({top});
         var timeSent = 0;
         var currentTime = 0;
         var timeSince = currentTime - timeSent;
