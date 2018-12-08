@@ -1,6 +1,6 @@
 <?php
   include("../assets/includes/config.php");
-  if (isset($_POST['body'])) {
+  if (isset($_GET['body'])) {
     if (!isLoggedIn()) {
       die("{\"status\":0,\"content\":\"Not authorised\"}");
     }
