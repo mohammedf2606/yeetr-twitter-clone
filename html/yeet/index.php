@@ -37,7 +37,7 @@
                 url: "../endpoints/yeet.php",
                 data: "body=" + escape(textInput),
                 success: function(data) {
-                    close()  
+                    window.top.close(); 
                 }
             });
             } else {
