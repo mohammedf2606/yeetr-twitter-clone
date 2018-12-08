@@ -26,7 +26,7 @@
         }
       }
       $db->query("UPDATE sessions SET state=2 WHERE uid='$user_id' AND state=1") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
-      $db->query("INSERT INTO sessions (sid, time, uid, state) VALUES ('$sid', $time, '$user_id', 1)") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
+      $db->query("INSERT INTO sessions (sid, time, uid, state) VALUES ('$sid', $timestamp, '$user_id', 1)") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
       $_SESSION['sid'] = $sid;
       die("{\"status\":1,\"content\":\"Session created\"}");
     } else {
