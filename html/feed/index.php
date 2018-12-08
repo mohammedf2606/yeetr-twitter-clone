@@ -22,16 +22,18 @@
         }
     </script>
     <p id = "feed">
-        <div>
-            <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
-            <b class = "name"><?php echo $user['name']; ?></b>
-            <label class = "handle"> Handle </label>
-            <label class = "time"> Time </label>
-        </div>
+        <table>
+            <tr>
+                <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
+            </tr>
+            <tr>
+                <b class = "name"><?php echo $user['name']; ?></b>
+                <label class = "handle"> Handle </label>
+                <label class = "time"> Time </label>
+            </tr>
+        </table>
         <label class = "yeet"> Yeet </label></p>
     <script>
-        var top = require("../endpoints/feed.php");
-        console.log({top});
         var timeSent = 0;
         var currentTime = 0;
         var timeSince = currentTime - timeSent;
