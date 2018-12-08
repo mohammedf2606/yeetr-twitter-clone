@@ -13,9 +13,9 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <div class = "a">
+    <center>
         <button id = "newYeet" onclick = "goToYeet()"> New Yeet :) </button>
-    </div>
+    </center>
     <script>
         function goToYeet() {
             window.location.replace("../yeet");
