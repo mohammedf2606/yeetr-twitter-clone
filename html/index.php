@@ -35,11 +35,10 @@
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             // The ID token you need to pass to your backend:
             var id_token = googleUser.getAuthResponse().id_token;
-                xhr.send('idtoken=' + id_token);
+            xhr.send('token=' + id_token);
             console.log("ID Token: " + id_token);
             window.location.replace("/feed");
         };
-        
     </script>
 
 </body>
