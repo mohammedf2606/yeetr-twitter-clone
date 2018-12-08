@@ -16,5 +16,12 @@
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
     <img src="">
+    <b> Full Name </b>
+    <h1> Handle </h1>
+    <script>
+        var timeSent = 0;
+        var currentTime = 0;
+        var timeSince = currentTime - timeSent;
+    </script>
   </body>
 </html>
