@@ -18,7 +18,7 @@
 <!--
 <a href="https://google.com"><img src="logo1.gif" alt="YEET"></a>
 -->
-    <div class="g-signin2"></div> <!-- Login button -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div> <!-- Login button -->
 
     <script>
         function onSignIn(googleUser) {
@@ -36,18 +36,6 @@
             console.log("ID Token: " + id_token);
         };
         
-        function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': false,
-                'theme': 'light',
-                'onsuccess': onSignIn,
-                'onfailure': onFailure
-            });
-        }
-
     </script>
 
 </body>
