@@ -1,5 +1,5 @@
 <?php
-  include("assets/includes/config.php");
+  include("../assets/includes/config.php");
   if (!isLoggedIn()) {
     header('Location: http://yeetr.me/');
     die();
