@@ -1,5 +1,4 @@
 # Ignores all class files
 *.class
-.idea/
-cred.json
 html/phpmyadmin
+html/assets/includes/secret.php
