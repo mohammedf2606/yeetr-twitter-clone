@@ -6,6 +6,10 @@ b.name {
     color: #000000;
 }
 
+label.yeet {
+    vertical-align: bottom;
+}
+
 label.handle {
     color: #DCDCDC;
 }
