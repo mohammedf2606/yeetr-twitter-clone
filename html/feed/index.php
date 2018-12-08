@@ -43,7 +43,7 @@
             var user = auth2.currentUser.get()
             console.log(user);
             console.log(user.getId());
-            show_image(user.w3.Paa, 96, 96, user.getGivenName());
+            show_image(user.w3.Paa, 96, 96, "Profile photo");
         });
     });
     </script>
