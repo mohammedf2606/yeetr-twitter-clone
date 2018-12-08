@@ -1,5 +1,10 @@
 <?php
   include("assets/includes/config.php");
+
+  if (isLoggedIn()) {
+    header('Location: http://yeetr.me/feed');
+    exit()
+  }
 ?>
  <html>
   <head>
