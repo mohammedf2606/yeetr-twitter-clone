@@ -6,7 +6,7 @@
     }
     </style>
     <meta name="google-signin-scope" content="profile email">
-    <script src="https://apis.google.com/js/platform.js?onload=init" async defer>
+    <script src="https://apis.google.com/js/platform.js?onload=init">
     
         function init() {
             gapi.load('auth2', function() { // Ready. });
