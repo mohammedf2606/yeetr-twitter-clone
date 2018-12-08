@@ -14,4 +14,11 @@
   // site basics
   $conf_name = 'Yeetr';
   $conf_refresh = false;
+
+  // basic function
+  function validToken($t) {
+    $token = $db->real_escape_string($t);
+    $q = $db->query("SELECT * FROM sessions WHERE sid='$token' AND status=1");
+    return mysqli_num_rows($q) > 0;
+  }
 ?>
