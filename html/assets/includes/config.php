@@ -12,6 +12,6 @@
   $client_secret = $sec_client_secret;
 
   // site basics
-  $conf_name = 'Yeetr'
+  $conf_name = 'Yeetr';
   $conf_refresh = false;
 ?>
