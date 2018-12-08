@@ -9,7 +9,7 @@
 
 <head>
     <title>Send a Yeet - <?php echo $conf_name; ?></title>
-    <script src="jquery-1.6.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
 
 </head>
