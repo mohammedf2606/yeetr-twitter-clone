@@ -30,9 +30,12 @@
             console.log('Family Name: ' + profile.getFamilyName());
             console.log("Image URL: " + profile.getImageUrl());
             console.log("Email: " + profile.getEmail());
-
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://yeetr.me/auth/');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             // The ID token you need to pass to your backend:
             var id_token = googleUser.getAuthResponse().id_token;
+                xhr.send('idtoken=' + id_token);
             console.log("ID Token: " + id_token);
             window.location.replace("/feed");
         };
