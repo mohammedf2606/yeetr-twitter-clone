@@ -12,7 +12,10 @@
 
 <body>
 
+    <div class="g-signin2" data-onsuccess="onSignIn" data-onfailure ="onFailure" style="display: none;"></div>
+
     <script>
+        function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
             var profile = googleUser.getBasicProfile();
             console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -25,6 +28,23 @@
             // The ID token you need to pass to your backend:
             var id_token = googleUser.getAuthResponse().id_token;
             console.log("ID Token: " + id_token);
+
+            function show_image(src, width, height, alt) {
+                var img = document.createElement("img");
+                img.src = profile.getImageUrl();
+                img.width = width;
+                img.height = height;
+                img.alt = alt;
+
+                // This next line will just add it to the <body> tag
+                document.body.appendChild(img);
+}
+            
+        };
+
+        function onFailure(googleUser) {
+            window.location.replace("yeetr.me");
+        }
         
     </script>
 
