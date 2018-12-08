@@ -16,7 +16,7 @@
     <p> </p>
     <img src="<?php echo $user['pic']; ?>">
     <b><?php echo $user['name']; ?></b>
-    <label class = "a"> Handle </label>
+    <label class = "handle"> Handle </label>
     <script>
         var timeSent = 0;
         var currentTime = 0;
