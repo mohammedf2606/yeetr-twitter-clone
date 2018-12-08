@@ -28,6 +28,7 @@
     <script>
 
         function submitYeet() {
+            alert('f');
             var textInput = $('#yeetInput').val();
             if (textInput != "") {
                 console.log(textInput);
