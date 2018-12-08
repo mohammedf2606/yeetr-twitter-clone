@@ -15,5 +15,6 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
+    <img src="">
   </body>
 </html>
