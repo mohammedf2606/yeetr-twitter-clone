@@ -29,8 +29,7 @@
                     <b class = "name"><?php echo $user['name']; ?></b>
                     <label class = "handle"> Handle </label>
                     <label class = "time"> Time </label>
-                </tr>
-                <tr>
+                    <br>
                     <label class = "yeet"> Yeet </label></p>
                 </tr>
             </tc>
