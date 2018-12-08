@@ -28,7 +28,6 @@
             //scope: 'profile'
         });
         
-
         function show_image(src, width, height, alt) {
             var img = document.createElement("img");
             img.src = src;
@@ -39,6 +38,12 @@
             document.body.appendChild(img);
         }
 
+        function show_name(user){
+            var name = document.createElement("label");
+            name.innerHTML = user.w3.ig;
+            document.appendChild(name);
+
+        }
 
         // Sign the user in, and then retrieve their ID.
         auth2.signIn().then(function() {
@@ -46,8 +51,20 @@
             console.log(user);
             console.log(user.getId());
             show_image(user.w3.Paa, 96, 96, "Profile photo");
+            show_name(user);
         });
     });
     </script>
+
+    <a href="#" onclick="signOut();">Sign out</a>
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+            window.location.replace("http://yeetr.me");
+        });
+  }
+</script>
 
 </body>
