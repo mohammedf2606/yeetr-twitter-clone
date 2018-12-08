@@ -1,5 +1,9 @@
 <?php
   include("assets/includes/config.php");
+  if (!isLoggedIn()) {
+    header('Location: http://yeetr.me/');
+    die();
+  }
 ?>
  <html>
   <head>
@@ -11,15 +15,5 @@
   </head>
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <div class="g-signin2" data-onsuccess="onSignIn"></div> <!-- Login button -->
-    <script>
-      function onSignIn(googleUser) {
-        var xhr = new XMLHttpRequest();
-        var id_token = googleUser.getAuthResponse().id_token;
-        xhr.open('POST', 'http://yeetr.me/auth/');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send('token=' + id_token);
-      };
-    </script>
   </body>
 </html>
