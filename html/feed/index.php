@@ -25,10 +25,24 @@
             fetch_basic_profile: false,
             scope: 'profile'
         });
+        
+
+        function show_image(src, width, height, alt) {
+            var img = document.createElement("img");
+            img.src = src;
+            img.width = width;
+            img.height = height;
+            img.alt = alt;
+            // This next line will just add it to the <body> tag
+            document.body.appendChild(img);
+        }
 
         // Sign the user in, and then retrieve their ID.
         auth2.signIn().then(function() {
-            console.log(auth2.currentUser.get().getId());
+            var user = auth2.currentUser.get()
+            console.log(user);
+            console.log(user.getId());
+            show_image(user.getImageUrl(), 96, 96, user.getGivenName());
         });
     });
     </script>
