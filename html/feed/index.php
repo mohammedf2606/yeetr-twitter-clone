@@ -49,8 +49,9 @@
             var user = auth2.currentUser.get()
             console.log(user);
             console.log(user.getId());
-            show_image(user.w3.Paa, 96, 96, "Profile photo");
             show_name(user);
+            show_image(user.w3.Paa, 96, 96, "Profile photo");
+            
         });
     });
     </script>
@@ -63,7 +64,8 @@
             console.log('User signed out.');
             window.location.replace("http://yeetr.me");
         });
-  }
-</script>
+        }
+    </script>
+    <p></p>
 
 </body>
