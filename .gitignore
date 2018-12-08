@@ -1,3 +1,4 @@
 # Ignores all class files
 *.class
 .idea/
+cred.json
