@@ -44,6 +44,7 @@
         };
 
         function onFailure(googleUser) {
+            console.log('No user');
             window.location.replace("..");
         }
         
