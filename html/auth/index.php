@@ -5,7 +5,7 @@
   if (isset($_POST['token'])) {
     $token = $_POST['token'];
     $client = new Google_Client(['client_id' => $client_id]);  // Specify the CLIENT_ID of the app that accesses the backend
-    $payload = $client->verifyIdToken($id_token);
+    $payload = $client->verifyIdToken($token);
     if ($payload) {
       // now we know the token is valid, we can start getting information from it
       $user_id = strval($payload['sub']);
