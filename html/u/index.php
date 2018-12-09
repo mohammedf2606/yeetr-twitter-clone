@@ -84,7 +84,7 @@
           <br>
           <em><?php echo $user['bio']?></em>
 <?php
-  if ($currentSession == $load) {
+  if ($currentUser == $load) {
 ?>
           
 <?php
