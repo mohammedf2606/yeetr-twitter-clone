@@ -11,7 +11,7 @@
       die();
     } else {
       $results = $db->query("SELECT * FROM users WHERE LOWER(name) LIKE '$search'");
-      while ($user = $result->fetch_assoc()) {
+      while ($user = $results->fetch_assoc()) {
         $u = array();
         $u['id'] = $user['uid'];
         $u['bio'] = $user['bio'];
