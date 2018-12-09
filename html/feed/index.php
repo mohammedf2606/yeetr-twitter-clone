@@ -18,7 +18,7 @@
       Search:
       <br>
       <input id="search" type="text" placeholder="Search users" size=100>
-      <button onclick="search()"> Search! </button>
+      <button onclick="search"> Search! </button>
     </form>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
@@ -27,7 +27,7 @@
     <br>
     <script>
       function search() {
-        window.location.href = "http://yeetr.me/search/" + encodeURI($('#bio').val())
+        window.location = "http://yeetr.me/search/" + encodeURI($('#search').val())
       }
       $(function() {
         loadYeets();
