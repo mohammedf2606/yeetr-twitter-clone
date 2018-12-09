@@ -46,6 +46,7 @@
     <script>
       $(function() {
         loadYeets();
+        gapi.load('auth2', function() { });
       });
       setInterval(function() {
         loadYeets();
@@ -110,7 +111,7 @@
           <p></p>
           <button onclick="logOut()">Log out</button>
 
-          <script> 
+          <script>
             function update(){
               var newName = $('#name').val();
               var newBio = $('#bio').val();
@@ -124,10 +125,10 @@
               });
             }
 
-            function logOut(){
+            function logOut() {
               var auth2 = gapi.auth2.getAuthInstance();
               auth2.signOut().then(function () {
-              console.log('User signed out.');
+                console.log('User signed out.');
               });
             }
           </script>
