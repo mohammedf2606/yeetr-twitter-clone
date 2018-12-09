@@ -14,7 +14,7 @@
   </head>
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
-    <form class = "a">
+    <form>
       Search:<br>
       <input type="text"  name="search" placeholder="Search users">
     </br>
