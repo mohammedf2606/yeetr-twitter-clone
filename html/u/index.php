@@ -50,7 +50,7 @@
       var auth2;
       function init() {
         gapi.load('auth2', function() { });
-        auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
+        this.auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
       }
       setInterval(function() {
         loadYeets();
@@ -130,7 +130,7 @@
             }
 
             function logOut() {
-              auth2.signOut().then(function () {
+              this.auth2.signOut().then(function () {
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
                 xhr.send();
