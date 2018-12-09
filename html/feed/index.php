@@ -17,7 +17,7 @@
     <form>
       Search:<br>
       <input type="text"  name="search" placeholder="Search users" size=100>
-      <button id = "search" onclick="search()"> Search! </button>
+      <button id ="search" onclick="search()"> Search! </button>
     </form>
     <center>
       <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
