@@ -132,7 +132,7 @@
               var auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
                 auth2.signOut().then(function () {
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
+                xhr.open('POST', 'http://yeetr.me/endpoints/deauth.php'); //replace post with get
                 xhr.send();
                 xhr.onreadystatechange = function() {
                   if (this.readyState == 4 && this.status == 200) {
