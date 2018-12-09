@@ -27,8 +27,13 @@
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
     <button id="yeet" type="button" onclick="submitYeet()">YEET!</button>
+    <button id="cancel" type="button" onclick="cancel()">cancel :(</button>
 
     <script>
+
+        function cancel(){
+            window.location.replace("../feed"); 
+        }
 
         function submitYeet() {
             document.getElementById("yeet").disabled = true;
