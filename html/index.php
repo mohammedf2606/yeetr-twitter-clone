@@ -24,6 +24,13 @@
         xhr.open('POST', 'http://yeetr.me/auth/');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send('token=' + id_token);
+        xhr.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            location.reload(true);
+          }
+        };
+
+
       };
     </script>
   </body>
