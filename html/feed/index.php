@@ -30,7 +30,7 @@
             var obj = JSON.parse(data);
             if (obj.status == 1) {
               $("#yeets tr").remove();
-              $.each(obj.content.posts, function(index, value) {
+              $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
                 yeetHtml += "<img style=\"vertical-align:top\" src=\"<?php echo value.user.pic; ?>\"></td>";
                 yeetHtml += "<td width=\"20%\"><b class=\"name\"><?php echo value.user.name; ?></b><br>";
