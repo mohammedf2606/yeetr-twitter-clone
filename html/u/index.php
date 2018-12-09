@@ -44,8 +44,8 @@
       function loadYeets() {
         $.ajax({
           type: "GET",
-          url: "../endpoints/feed.php",
-          data: "",
+          url: "../endpoints/singlefeed.php",
+          data: "user=<?php echo $load; ?>",
           success: function(data) {
             var obj = JSON.parse(data);
             if (obj.status == 1) {
