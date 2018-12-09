@@ -14,7 +14,7 @@
   </head>
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
-    <marquee><img src="/assets/img/logo.gif" alt="YEET"></marquee>
+    <marquee><img src="/assets/img/logo.gif" style="float:left;" alt="YEET"></marquee>
     <form>
       Search:
       <br>
