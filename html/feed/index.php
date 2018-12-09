@@ -33,9 +33,7 @@
                 <label class = "handle"> Handle </label>
                 <label class = "time"> Time </label>
               </div>
-              <div style="vertical-align:bottom">
                 <label class = "yeet"> Yeet </label>
-              </div>
             </td>
           </tr>
         </table>
