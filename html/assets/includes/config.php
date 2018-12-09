@@ -84,10 +84,12 @@
     return mysqli_num_rows($follow_check) > 0;
   }
   function followerCount($u) {
+    global $db;
     $follow_check = $db->query("SELECT * FROM follows WHERE user2='$u'");
     return mysqli_num_rows($follow_check);
   }
   function followingCount($u) {
+    global $db;
     $follow_check = $db->query("SELECT * FROM follows WHERE user1='$u'");
     return mysqli_num_rows($follow_check);
   }
