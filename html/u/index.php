@@ -143,9 +143,9 @@
 <?php
   } else {
 ?>
-          <h3><?php echo $user['name']; ?></h3>
+          <h3><?php echo htmlspecialchars($user['name']); ?></h3>
           <br>
-          <em><?php echo $user['bio']?></em>
+          <em><?php echo htmlspecialchars($user['bio']); ?></em>
 <?php
   }
 ?>
