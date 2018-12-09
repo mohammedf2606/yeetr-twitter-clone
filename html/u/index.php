@@ -35,7 +35,7 @@
 
     <script>
 
-      console.log(<?php echo $user; ?>);
+      console.log("hello" + "<?php echo $user; ?>");
 
       function goToYeet() {
         window.location.replace("../yeet");
