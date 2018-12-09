@@ -16,7 +16,7 @@
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
     <form>
       Search:<br>
-      <input type="text"  name="search" placeholder="Search users">
+      <input type="text"  name="search" placeholder="Search users" size=100>
       </br>
       <button id = "search" onclick="search()"> Search! </button>
     </form>
@@ -25,7 +25,7 @@
     </center>
     <script>
       function search() {
-
+        console.log("Searching" + );
       }
       function goToYeet() {
         window.location.replace("../yeet");
