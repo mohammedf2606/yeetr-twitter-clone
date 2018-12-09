@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+    <marquee>Welcome to YEeTr; (Y)esterday's (E)l(e)ctronic (T)witte(r)</marquee>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
     <h1>page not found!</h1>
     <a href="../">Click here to return to the homepage</a>

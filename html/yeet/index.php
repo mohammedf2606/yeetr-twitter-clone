@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
   </head>
   <body>
+    <marquee>Welcome to YEeTr; (Y)esterday's (E)l(e)ctronic (T)witte(r)</marquee>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <p><img src="<?php echo $user['pic']; ?>"></p>
     <p><b class="name"><?php echo $user['name']; ?></b></p>

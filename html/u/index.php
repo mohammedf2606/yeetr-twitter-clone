@@ -37,6 +37,7 @@
     <meta name="google-signin-client_id" content="<?php echo $client_id; ?>">
   </head>
   <body>
+    <marquee>Welcome to YEeTr; (Y)esterday's (E)l(e)ctronic (T)witte(r)</marquee>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
