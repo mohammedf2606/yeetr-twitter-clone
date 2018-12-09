@@ -25,7 +25,7 @@
     </center>
     <script>
       function search() {
-        console.log("Searching" + );
+        console.log("Searching");
       }
       function goToYeet() {
         window.location.replace("../yeet");
