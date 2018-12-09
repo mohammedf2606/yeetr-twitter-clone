@@ -16,10 +16,13 @@
 
 <body>
 
-    <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
-    <img src="<?php echo $user['pic']; ?>">
-    <b class="name"><?php echo $user['name']; ?></b>
-    <label class="handle">Handle</label>
+    <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
+    <p>
+        <img src="<?php echo $user['pic']; ?>">
+    </p>
+    <p> 
+        <b class="name"><?php echo $user['name']; ?></b>
+    </p>
     <p></p>
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
