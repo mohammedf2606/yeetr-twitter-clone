@@ -138,7 +138,7 @@
                   location.reload(true);  
                 };
               });
-              document.getElementById("logout").value= "Confirm";
+              document.getElementById("logout").innerText= "Confirm";
             }
           </script>
 <?php
