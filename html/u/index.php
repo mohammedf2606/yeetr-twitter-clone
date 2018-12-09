@@ -47,9 +47,10 @@
       $(function() {
         loadYeets();
       });
+      var auth2;
       function init() {
         gapi.load('auth2', function() { });
-        var auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
+        auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
       }
       setInterval(function() {
         loadYeets();
