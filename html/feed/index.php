@@ -27,7 +27,7 @@
     <br>
     <script>
       function search() {
-        window.location = "http://yeetr.me/search/" + encodeURI($('#search').val())
+        window.location = "http://yeetr.me/search/" + encodeURI($('#search').val());
       }
       $(function() {
         loadYeets();
