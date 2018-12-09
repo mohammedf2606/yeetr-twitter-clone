@@ -33,7 +33,7 @@
     <title>User - <?php echo $conf_name; ?></title>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
     <meta name="google-signin-client_id" content="<?php echo $client_id; ?>">
   </head>
   <body>
@@ -44,22 +44,12 @@
     <p></p>
 
     <script>
-      var auth2;
       $(function() {
         loadYeets();
-        gapi.load('auth2', function() { });
-        auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
       });
-
-      function logOut() {
-        auth2.signOut().then(function () {
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
-          xhr.send();
-          xhr.onreadystatechange = function() {
-            location.reload(true);
-          };
-        });
+      function init() {
+        gapi.load('auth2', function() { });
+        gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
       }
       setInterval(function() {
         loadYeets();
@@ -135,6 +125,18 @@
                 success: function(data) {
                 alert(JSON.parse(data).content);
                 }
+              });
+            }
+
+            function logOut() {
+              var auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
+              auth2.signOut().then(function () {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
+                xhr.send();
+                xhr.onreadystatechange = function() {
+                  location.reload(true);
+                };
               });
             }
           </script>
