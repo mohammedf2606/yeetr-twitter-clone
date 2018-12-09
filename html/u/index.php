@@ -23,14 +23,10 @@
   $user = getUserByUID($load);
   $currentUser = "";
   if ($authed) {
-    echo "auth";
     $u = getUserBySID();
     $currentUser = $u['id'];
     $follows = follows($currentUser, $load);
   }
-  echo $currentUser;
-  echo "X";
-  echo $load;
 ?>
 <html>
   <head>
@@ -51,7 +47,24 @@
       });
       setInterval(function() {
         loadYeets();
-	  }, 2000);
+      }, 2000);
+      function fToggle(caller) {
+        $.ajax({
+          type: "GET",
+          url: "../endpoints/follow.php",
+          data: "target=<?php echo $load; ?>",
+          success: function(data) {
+            var obj = JSON.parse(data);
+            if (obj.status == 1) {
+              if (obj.content == "Followed") {
+                caller.html = "Unfollow";
+              } else {
+                caller.html = "Follow";
+              }
+            }
+          }
+        });
+      }
       function loadYeets() {
         $.ajax({
           type: "GET",
@@ -90,7 +103,7 @@
 <?php
   } else if ($authed) {
 ?>
-          <button id="follow" onclick="ftoggle"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
+          <button id="follow" onclick="fToggle(this)"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
 <?php
   }
 ?>
