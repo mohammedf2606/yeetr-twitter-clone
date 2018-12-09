@@ -28,7 +28,7 @@
       $new_yeeter = array();
       $new_yeeter['id'] = $id;
       $new_yeeter['pic'] = $yeeter['pic'];
-      $new_yeeter['name'] = $yeeter['name'];
+      $new_yeeter['name'] = htmlspecialchars($yeeter['name']);
       $user_cache[$id] = $new_yeeter;
     }
     $new_yeet['user'] = $user_cache[$id]; // we could use the user profile here too?
