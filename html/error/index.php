@@ -10,6 +10,6 @@
   <body>
     <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
     <h1>page not found!</h1>
-    <a href="../">Click here to return</a>
+    <a href="../">Click here to return to the homepage</a>
   </body>
 </html>

@@ -33,7 +33,7 @@
     }
     $new_yeet['user'] = $user_cache[$id]; // we could use the user profile here too?
     $new_yeet['time'] = $time - intval($yeet['time']);
-    $new_yeet['body'] = $yeet['body'];
+    $new_yeet['body'] = htmlspecialchars($yeet['body']);
     array_push($body['content'], $new_yeet);
   }
   die(json_encode($body));
