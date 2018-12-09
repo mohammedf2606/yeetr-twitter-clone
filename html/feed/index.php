@@ -32,7 +32,8 @@
                     <label class = "handle"> Handle </label>
                     <label class = "time"> Time </label>
                     <br>
-                    <label class = "yeet"> Yeet </label>
+                        <label class = "yeet"> Yeet </label>
+                    </br>
                 </tr>
             </tc>
         </table>
