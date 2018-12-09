@@ -14,19 +14,17 @@
   </head>
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
-    <form>
       Search:
       <br>
       <input id="search" type="text" placeholder="Search users" size=100>
-      <button onclick="search"> Search! </button>
-    </form>
+      <button onclick="notsearch"> Search! </button>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
       <a href="http://yeetr.me/u/"+ <?php echo $user[id] ?>><button style="float:right;"> Profile </button></a>
     </center>
     <br>
     <script>
-      function search() {
+      function notsearch() {
         alert( "http://yeetr.me/search/" + encodeURI($('#search').val()));
       }
       $(function() {
