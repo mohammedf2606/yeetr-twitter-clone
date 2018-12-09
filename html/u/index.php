@@ -30,15 +30,11 @@
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <center>
-      <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
+      <button id="newYeet" href="http://yeetr.me/yeet/"> New Yeet :) </button>
     </center>
     <p></p>
 
     <script>
-
-      function goToYeet() {
-        window.location.replace("../../yeet");
-      }
       $(function() {
         loadYeets();
       });
@@ -53,7 +49,7 @@
           success: function(data) {
             var obj = JSON.parse(data);
             if (obj.status == 1) {
-              //$("#yeets tr").remove();
+              $("#yeets tr").remove();
               $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
                 yeetHtml += "<img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></td>";
@@ -71,7 +67,7 @@
     <table width="100%">
       <tr>
         <td width="15%">
-          <img width="100%" src="<?php echo $user['pic']; ?>">
+          <img style="vertical-align:top" width="100%" src="<?php echo $user['pic']; ?>">
         </td>
         <td>
           <table border="1px" width="100%" id="yeets">
