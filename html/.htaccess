@@ -1,0 +1,9 @@
+ErrorDocument 400 http://yeetr.me/error/
+ErrorDocument 403 http://yeetr.me/error/
+ErrorDocument 404 http://yeetr.me/error/
+ErrorDocument 500 http://yeetr.me/error/
+<Files .htaccess>
+  order allow,deny
+  deny from all
+</Files>
+Options All -Indexes
