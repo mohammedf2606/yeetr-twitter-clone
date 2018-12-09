@@ -13,7 +13,7 @@
 
   // site basics
   $conf_name = 'YEeTr';
-  $conf_refresh = true;
+  $conf_refresh = false;
 
   // basic function
   function isLoggedIn() {
@@ -82,5 +82,13 @@
     $u2 = $db->real_escape_string($y);
     $follow_check = $db->query("SELECT * FROM follows WHERE user1='$u1' AND user2='$u2'") or die("{\"status\":0,\"content\":\"Following failed\"}");
     return mysqli_num_rows($follow_check) > 0;
+  }
+  function followerCount($u) {
+    $follow_check = $db->query("SELECT * FROM follows WHERE user2='$u'");
+    return mysqli_num_rows($follow_check)
+  }
+  function followingCount($u) {
+    $follow_check = $db->query("SELECT * FROM follows WHERE user1='$u'");
+    return mysqli_num_rows($follow_check)
   }
 ?>

@@ -99,6 +99,10 @@
         <td valign="top" width="15%">
           <img width="100%" src="<?php echo $user['pic']; ?>">
           <br>
+          <b>Followers: </b><em><?php echo strval(followerCount($load)); ?></em>
+          <br>
+          <b>Following: </b><em><?php echo strval(followingCount($load)); ?></em>
+          <br>
 <?php
   if ($currentUser == $load) {
 ?>
