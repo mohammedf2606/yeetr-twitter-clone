@@ -50,7 +50,18 @@
       var auth2;
       function init() {
         gapi.load('auth2', function() { });
-        this.auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
+        auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
+      }
+
+      function logOut() {
+        auth2.signOut().then(function () {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
+          xhr.send();
+          xhr.onreadystatechange = function() {
+            location.reload(true);
+          };
+        });
       }
       setInterval(function() {
         loadYeets();
@@ -126,17 +137,6 @@
                 success: function(data) {
                 alert(JSON.parse(data).content);
                 }
-              });
-            }
-
-            function logOut() {
-              this.auth2.signOut().then(function () {
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
-                xhr.send();
-                xhr.onreadystatechange = function() {
-                  location.reload(true);
-                };
               });
             }
           </script>
