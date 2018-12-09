@@ -73,7 +73,7 @@
           <br>
           <em><?php echo $user['bio']?></em>
         </td>
-        <td>
+        <td valign="top">
           <table border="1px" width="100%" id="yeets">
           </table>
         </td>
