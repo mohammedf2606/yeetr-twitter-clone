@@ -37,7 +37,7 @@
     <script>
 
       function goToYeet() {
-        window.location.replace("../yeet");
+        window.location.replace("../../yeet");
       }
       $(function() {
         loadYeets();
@@ -53,7 +53,7 @@
           success: function(data) {
             var obj = JSON.parse(data);
             if (obj.status == 1) {
-              $("#yeets tr").remove();
+              //$("#yeets tr").remove();
               $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
                 yeetHtml += "<img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></td>";
