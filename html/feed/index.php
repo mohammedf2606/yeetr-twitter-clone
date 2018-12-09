@@ -17,12 +17,16 @@
     <form>
       Search:<br>
       <input type="text"  name="search" placeholder="Search users">
-    </br>
+      </br>
+      <button id = "search" onclick="search()"> Search! </button>
     </form>
     <center>
       <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
     </center>
     <script>
+      function search() {
+
+      }
       function goToYeet() {
         window.location.replace("../yeet");
       }
