@@ -19,6 +19,7 @@
       die();
     }
   }
+  $user = getUserBySID();
 ?>
 <html>
   <head>
@@ -67,7 +68,15 @@
         });
       }
     </script>
-    <table border="1px" width="100%" id="yeets">
+    <table width="100%">
+      <tr>
+        <td width="20%">
+        </td>
+        <td>
+          <table border="1px" width="100%" id="yeets">
+          </table>
+        </td>
+      </tr>
     </table>
   </body>
 </html>
