@@ -140,6 +140,7 @@
                   } 
                 };
               });
+              logOut();
             }
           </script>
 <?php
