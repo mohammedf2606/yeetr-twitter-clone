@@ -27,7 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <img src="/assets/img/logo.gif" alt="YEET"> <!-- Source: cooltext -->
+    <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <center>
       <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
     </center>
