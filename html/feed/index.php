@@ -32,11 +32,11 @@
               $("#yeets tr").remove();
               $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
-                yeetHtml += "<img style=\"vertical-align:top\" src=\"<?php echo value.user.pic; ?>\"></td>";
-                yeetHtml += "<td width=\"20%\"><b class=\"name\"><?php echo value.user.name; ?></b><br>";
-                yeetHtml += "<label class=\"handle\"><?php echo value.user.id; ?></label>";
-                yeetHtml += "<label class=\"time\"><?php echo "Posted ".strval(value.user.time)." seconds ago"; ?></label></td><td>";
-                yeetHtml += "<label class=\"yeet\"> <?php echo value.body; ?></label></td></tr>";
+                yeetHtml += "<img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></td>";
+                yeetHtml += "<td width=\"20%\"><b class=\"name\">" + value.user.name + "</b><br>";
+                yeetHtml += "<label class=\"handle\">" + value.user.id + "</label>";
+                yeetHtml += "<label class=\"time\">Posted " + value.user.time + " seconds ago</label></td><td>";
+                yeetHtml += "<label class=\"yeet\">" + value.body + "</label></td></tr>";
                 $("#yeets").append(yeetHtml);
               });
             }
