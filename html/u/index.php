@@ -98,7 +98,7 @@
 ?>
           <input width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
           <br>
-          <textarea style="width: 100%;"><?php echo $user['bio']?></textarea>
+          <textarea style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
 <?php
   } else {
 ?>
