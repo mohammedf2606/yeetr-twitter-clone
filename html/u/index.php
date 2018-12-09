@@ -131,8 +131,10 @@
             function logOut() {
               var auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
               auth2.signOut().then(function () {
-                console.log('User signed out.');
               });
+              var xhr = new XMLHttpRequest();
+              xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
+              xhr.send();
             }
           </script>
 <?php
