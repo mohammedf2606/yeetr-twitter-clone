@@ -24,7 +24,7 @@
     <p id = "feed">
         <table>
             <tc>
-                <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">\
+                <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
             </tc>
             <tc>
                 <tr>
@@ -32,7 +32,7 @@
                     <label class = "handle"> Handle </label>
                     <label class = "time"> Time </label>
                     <br>
-                    <label class = "yeet"> Yeet </label></p>
+                    <label class = "yeet"> Yeet </label>
                 </tr>
             </tc>
         </table>
