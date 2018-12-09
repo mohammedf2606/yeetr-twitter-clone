@@ -98,13 +98,22 @@
 ?>
           <h3>Name:</h3>
           <p></p>
-          <input width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
+          <input id="name" width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
           <br>
           <h3>Bio:</h3>
           <p></p>
-          <textarea rows=5 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
+          <textarea id="bio" rows=5 maxlength=512 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
           <p></p>
-          <button>Update</button>
+          <button onclick="update()">Update</button>
+          <script> 
+            function update(){
+              var newName = $('#name').val();
+              var newBio = $('#bio').val();
+              console.log(newName);
+              console.log(newBio);
+
+            }
+          </script>
 <?php
   } else {
 ?>
