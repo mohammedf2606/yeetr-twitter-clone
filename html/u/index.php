@@ -21,12 +21,13 @@
   }
   $follows = false;
   $user = getUserByUID($load);
-  $currentSession = "";
+  $currentUser = "";
   if ($authed) {
-    $currentSession = getUserBySID()['id'];
-    $follows = follows($currentSession, $load);
+    $u = getUserBySID();
+    $currentUser = $u['id'];
+    $follows = follows($currentUser, $load);
   }
-  echo $currentSession;
+  echo $currentUser;
   echo "X";
   echo $load;
 ?>
