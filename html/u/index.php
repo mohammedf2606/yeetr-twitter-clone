@@ -23,6 +23,7 @@
   $user = getUserByUID($load);
   $currentUser = "";
   if ($authed) {
+    echo "auth";
     $u = getUserBySID();
     $currentUser = $u['id'];
     $follows = follows($currentUser, $load);
