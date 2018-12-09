@@ -38,7 +38,7 @@
               $("#yeets tr").remove();
               $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
-                yeetHtml += "<img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></td>";
+                yeetHtml += "<a href=\"http://www.yeetr.com/u"+ value.user.id +"\"><img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></a></td>";
                 yeetHtml += "<td width=\"20%\"><b class=\"name\">" + value.user.name + "</b><br>";
                 yeetHtml += "<label class=\"handle\">" + value.user.id + "</label><br>";
                 yeetHtml += "<label class=\"time\">Posted " + value.time + " seconds ago</label></td><td>";
