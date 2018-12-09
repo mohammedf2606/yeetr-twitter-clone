@@ -133,14 +133,12 @@
                 auth2.signOut().then(function () {
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
-                xhr.send('token=' + id_token);
+                xhr.send();
                 xhr.onreadystatechange = function() {
-                  if (this.readyState == 4 && this.status == 200) {
-                    location.reload(true);
-                  }  
+                  location.reload(true);  
                 };
-                location.reload(true); 
               });
+              location.reload(true); 
             }
           </script>
 <?php
