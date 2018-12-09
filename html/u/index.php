@@ -27,6 +27,7 @@
     $follows = follows($currentSession, $load);
   }
   echo $currentSession;
+  echo "X";
   echo $load;
 ?>
 <html>
