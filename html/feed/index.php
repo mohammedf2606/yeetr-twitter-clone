@@ -22,34 +22,21 @@
         }
     </script>
     <p id = "feed">
-        <table border="1px">
+        <table border="1px" width="100%">
           <tr>
             <td>
               <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
             </td>
-            <td>
+            <td width="20%">
               <b class = "name"><?php echo $user['name']; ?></b>
+              <br>
               <label class = "handle"> Handle </label>
               <label class = "time"> Time </label>
             </td>
             <td>
-              <label class = "yeet"> Yeet </label>
+              <label class ="yeet"> Yeet </label>
             </td>
           </tr>
         </table>
-    <script>
-        var timeSent = 0;
-        var currentTime = 0;
-        var timeSince = currentTime - timeSent;
-        // for each (var yeet in listOfYeets) {
-        //     document.getElementById('feed').write(
-        //         <div>
-        //             <img style="vertical-align:top" src=" <?php echo $user['pic']; ?>">
-        //             <b class = "name"><?php echo $user['name']; ?></b>
-        //             <label class = "handle"> Handle </label>
-        //         </div>
-        //     <label class = "yeet"> Yeet </label>);
-        // }
-    </script>
   </body>
 </html>
