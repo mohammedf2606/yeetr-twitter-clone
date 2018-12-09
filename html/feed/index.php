@@ -14,10 +14,12 @@
   </head>
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
+    <div class="rfloat">
       Search:
       <br>
       <input id="search" type="text" placeholder="Search users" size=100>
       <button onclick="notsearch"> Search! </button>
+    </div>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
       <a href="http://yeetr.me/u/"+ <?php echo $user[id] ?>><button style="float:right;"> Profile </button></a>
