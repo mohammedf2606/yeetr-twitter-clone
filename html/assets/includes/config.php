@@ -76,4 +76,11 @@
     $user_check = $db->query("SELECT * FROM users WHERE uid='$uid'");
     return mysqli_num_rows($user_check) > 0;
   }
+  function follows($x, $y) {
+    global $db;
+    $u1 = $db->real_escape_string($x);
+    $u2 = $db->real_escape_string($y);
+    $follow_check = $db->query("SELECT * FROM follows WHERE user1='$u1' AND user2='$u2'") or die("{\"status\":0,\"content\":\"Following failed\"}");
+    return mysqli_num_rows($follow_check) > 0;
+  }
 ?>

@@ -19,7 +19,15 @@
       die();
     }
   }
+  $follows = false;
   $user = getUserByUID($load);
+  $currentSession = "";
+  if ($authed) {
+    $currentSession = getUserBySID()['id'];
+    $follows = follows($currentSession, $load);
+  }
+  echo $currentSession;
+  echo $load;
 ?>
 <html>
   <head>
@@ -72,6 +80,17 @@
           <h3><?php echo $user['name']; ?></h3>
           <br>
           <em><?php echo $user['bio']?></em>
+<?php
+  if ($currentSession == $load) {
+?>
+          
+<?php
+  } else if ($authed) {
+?>
+          <button id="follow" onclick="ftoggle"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
+<?php
+  }
+?>
         </td>
         <td valign="top">
           <table border="1px" width="100%" id="yeets">

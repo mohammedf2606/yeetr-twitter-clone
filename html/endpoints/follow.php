@@ -11,11 +11,11 @@
       die("{\"status\":0,\"content\":\"You can't follow yourself\"}");
     }
     $timestamp = strval(time());
-    $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Following failed0\"}");
+    $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Following failed\"}");
     if (!userExists($tid)) {
       die("{\"status\":0,\"content\":\"Invalid target\"}");
     } else {
-      $follow_check = $db->query("SELECT * FROM follows WHERE user1='$uid' AND user2='$tid'") or die("{\"status\":0,\"content\":\"Following failed2\"}");
+      $follow_check = $db->query("SELECT * FROM follows WHERE user1='$uid' AND user2='$tid'") or die("{\"status\":0,\"content\":\"Following failed\"}");
       if (mysqli_num_rows($follow_check) == 0) {
         $db->query("INSERT INTO follows (user1, user2) VALUES ('$uid', '$tid')") or die("{\"status\":0,\"content\":\"Following failed\"}");
         die("{\"status\":1,\"content\":\"Followed\"}");
