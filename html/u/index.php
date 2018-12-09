@@ -57,9 +57,9 @@
             var obj = JSON.parse(data);
             if (obj.status == 1) {
               if (obj.content == "Followed") {
-                caller.text("Unfollow");
+                caller.val("Unfollow");
               } else {
-                caller.text("Follow");
+                caller.val("Follow");
               }
             }
           }
