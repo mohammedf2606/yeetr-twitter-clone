@@ -103,7 +103,7 @@
 <?php
   } else if ($authed) {
 ?>
-          <button id="follow" onclick="fToggle"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
+          <button id="follow" onclick="fToggle()"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
 <?php
   }
 ?>
