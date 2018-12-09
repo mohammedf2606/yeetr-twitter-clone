@@ -31,7 +31,12 @@
     <center>
       <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
     </center>
+    <p></p>
+
     <script>
+
+      console.log(<?php echo $user ?>);
+
       function goToYeet() {
         window.location.replace("../yeet");
       }
