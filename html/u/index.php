@@ -105,21 +105,24 @@
           <textarea id="bio" rows=5 maxlength=512 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
           <p></p>
           <button onclick="update()">Update</button>
+          <br>
+          <button onclick="logOut()">Log out</button>
           <script> 
             function update(){
               var newName = $('#name').val();
               var newBio = $('#bio').val();
-              console.log(newName);
-              console.log(newBio);
               $.ajax({
                 type: "POST",
                 url: "../endpoints/profile.php",
                 data: "name=" + escape(newName) + " &bio=" + escape(newBio),
                 success: function(data) {
                 alert(JSON.parse(data).content);
+                }
+              });
             }
-          });
 
+            function logOut(){
+              console.log("Attempting to log out");
             }
           </script>
 <?php
