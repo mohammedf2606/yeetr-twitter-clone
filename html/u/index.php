@@ -134,9 +134,7 @@
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', 'http://yeetr.me/endpoints/deauth.php');
                 xhr.send();
-                xhr.onreadystatechange = function() {
-                  location.reload(true);
-                };
+                location.reload(true);
               });
             }
           </script>
