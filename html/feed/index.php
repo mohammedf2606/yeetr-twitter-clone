@@ -23,6 +23,9 @@
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
     </center>
+    <right>
+      <a href="http://yeetr.me/yeet/"><button> New Yote :) </button></a>
+    </right>
     <script>
       $(function() {
         loadYeets();
