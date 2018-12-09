@@ -23,7 +23,7 @@
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
     </center>
-      <a href="http://yeetr.me/yeet/"><button align="right"> New Yote :) </button></a>
+      <a href="http://yeetr.me/yeet/"><button style="float:right;"> New Yote :) </button></a>
     <script>
       $(function() {
         loadYeets();
