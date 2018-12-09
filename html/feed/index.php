@@ -13,8 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" style="float:left;" alt="YEET"></a><!-- Source: cooltext -->
-    <img src="/assets/img/logo.gif" style="float:left;" alt="YEET">
+    <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
     <form>
       Search:
       <br>
