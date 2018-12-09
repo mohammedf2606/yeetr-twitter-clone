@@ -9,10 +9,9 @@
     if ($payload) {
       // now we know the token is valid, we can start getting information from it
       $user_id = strval($payload['sub']);
-      $user_check = $db->query("SELECT * FROM users WHERE uid='$user_id'");
       $timestamp = strval(time());
       $pp = $db->real_escape_string(strval($payload['picture']));
-      if (mysqli_num_rows($user_check) == 0) {
+      if (!userExists($user_id)) {
         $name = $db->real_escape_string(strval($payload['name']));
         $db->query("INSERT INTO users (uid, name, bio, web, reg, last_seen, pic) VALUES ('$user_id', '$name', 'I\'m new to Yeetr!', '', $timestamp, $timestamp, '$pp')") or die("{\"status\":0,\"content\":\"Session creation failed\"}");
       } else {

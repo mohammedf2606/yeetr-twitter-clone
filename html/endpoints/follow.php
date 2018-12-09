@@ -12,8 +12,7 @@
     }
     $timestamp = strval(time());
     $db->query("UPDATE users SET last_seen=$timestamp WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Following failed0\"}");
-    $user_check = $db->query("SELECT * FROM users WHERE uid='$tid'") or die("{\"status\":0,\"content\":\"Following failed1\"}");
-    if (mysqli_num_rows($user_check) == 0) {
+    if (!userExists($tid)) {
       die("{\"status\":0,\"content\":\"Invalid target\"}");
     } else {
       $follow_check = $db->query("SELECT * FROM follows WHERE user1='$uid' AND user2='$tid'") or die("{\"status\":0,\"content\":\"Following failed2\"}");

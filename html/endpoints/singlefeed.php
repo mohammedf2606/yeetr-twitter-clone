@@ -7,8 +7,7 @@
     die("{\"status\":0,\"content\":\"No user specified\"}");
   }
   $uid = $db->real_escape_string($_GET['user']);
-  $user_check = $db->query("SELECT * FROM users WHERE uid='$uid'");
-  if (mysqli_num_rows($user_check) == 0) {
+  if (!userExists($uid)) {
     die("{\"status\":0,\"content\":\"User doesn't exist\"}");
   }
   $user_cache = array();

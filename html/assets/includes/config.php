@@ -54,4 +54,10 @@
     $user['id'] = $uid;
     return $user;
   }
+  function userExists($id) {
+    global $db;
+    $uid = $db->real_escape_string($id);
+    $user_check = $db->query("SELECT * FROM users WHERE uid='$uid'");
+    return mysqli_num_rows($user_check) > 0
+  }
 ?>
