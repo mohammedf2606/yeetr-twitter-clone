@@ -96,7 +96,7 @@
 <?php
   if ($currentUser == $load) {
 ?>
-          <input type="text" id="name" value="<?php echo $user['name']; ?>">
+          <input width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
           <br>
           <textarea width="100%"><?php echo $user['bio']?></textarea>
 <?php
