@@ -96,9 +96,16 @@
 <?php
   if ($currentUser == $load) {
 ?>
+          <h3>Name:</h3>
+          <br>
           <input width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
           <br>
+          <button>Update name</button>
+          <br>
+          <h3>Bio:</h3>
+          <br>
           <textarea style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
+          <button>Update bio</button>
 <?php
   } else {
 ?>
