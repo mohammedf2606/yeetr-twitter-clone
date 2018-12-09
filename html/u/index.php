@@ -26,6 +26,8 @@
     $currentSession = getUserBySID()['id'];
     $follows = follows($currentSession, $load);
   }
+  echo $currentSession;
+  echo $load;
 ?>
 <html>
   <head>
