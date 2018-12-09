@@ -137,10 +137,10 @@
                 xhr.onreadystatechange = function() {
                   if (this.readyState == 4 && this.status == 200) {
                     location.reload(true);
-                  } 
+                  }  
                 };
+                location.reload(true); 
               });
-              logOut();
             }
           </script>
 <?php
