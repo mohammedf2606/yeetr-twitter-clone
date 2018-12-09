@@ -16,8 +16,7 @@
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
     <form>
       Search:<br>
-      <input type="text"  name="search" placeholder="Search users" size=100>
-      </br>
+      <input type="text"  name="search" placeholder="Search users" size=100>      
       <button id = "search" onclick="search()"> Search! </button>
     </form>
     <center>
