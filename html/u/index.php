@@ -111,6 +111,14 @@
               var newBio = $('#bio').val();
               console.log(newName);
               console.log(newBio);
+              $.ajax({
+                type: "POST",
+                url: "../endpoints/yeet.php",
+                data: "name=" + escape(newName) + " &bio=" + escape(newBio),
+                success: function(data) {
+                alert(JSON.parse(data).content);
+            }
+          });
 
             }
           </script>
