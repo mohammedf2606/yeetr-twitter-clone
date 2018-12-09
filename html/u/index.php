@@ -93,9 +93,20 @@
         <td valign="top" width="15%">
           <img width="100%" src="<?php echo $user['pic']; ?>">
           <br>
+<?php
+  if ($currentUser == $load) {
+?>
+          <h3><input type="text" id="name" value="<?php echo $user['name']; ?>"></h3>
+<?php
+  } else {
+?>
           <h3><?php echo $user['name']; ?></h3>
           <br>
           <em><?php echo $user['bio']?></em>
+<?php
+  }
+?>
+          <br>
 <?php
   if ($currentUser == $load) {
 ?>

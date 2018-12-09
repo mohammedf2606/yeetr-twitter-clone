@@ -20,7 +20,7 @@
     <textarea placeholder="Type to Yeet!" id="yeetInput" rows="10" cols="80"></textarea>
     <p></p>
     <button id="yeet" type="button" onclick="submitYeet()">YEET!</button>
-    <a href="http://yeetr.me/yeet/"><button type="button">cancel :(</button></a>
+    <a href="http://yeetr.me/feed/"><button type="button">cancel :(</button></a>
     <script>
       function submitYeet() {
         document.getElementById("yeet").disabled = true;
