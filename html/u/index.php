@@ -30,7 +30,7 @@
 ?>
 <html>
   <head>
-    <title>Feed - <?php echo $conf_name; ?></title>
+    <title>User - <?php echo $conf_name; ?></title>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -113,7 +113,7 @@
               console.log(newBio);
               $.ajax({
                 type: "POST",
-                url: "../endpoints/yeet.php",
+                url: "../endpoints/profile.php",
                 data: "name=" + escape(newName) + " &bio=" + escape(newBio),
                 success: function(data) {
                 alert(JSON.parse(data).content);
