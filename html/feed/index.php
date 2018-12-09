@@ -18,7 +18,7 @@
       Search:
       <br>
       <input id="search" type="text" placeholder="Search users" size=100>
-      <button onclick="notsearch"> Search! </button>
+      <button onclick="notsearch()"> Search! </button>
     </div>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
@@ -27,6 +27,7 @@
     <br>
     <script>
       function notsearch() {
+        console.log("test");
         alert( "http://yeetr.me/search/" + encodeURI($('#search').val()));
       }
       $(function() {
