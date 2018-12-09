@@ -22,7 +22,7 @@
         }
     </script>
     <p id = "feed">
-        <table>
+        <table border="1px">
           <tr>
             <td>
               <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
