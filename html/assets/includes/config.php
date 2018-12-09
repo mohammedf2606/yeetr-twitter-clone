@@ -54,6 +54,22 @@
     $user['id'] = $uid;
     return $user;
   }
+  function getUserByUID($id) {
+    global $db;
+    $user = array();
+    if (!userExists($id)) {
+      return $user; // in theory, this should never be used
+    }
+    $uid = $db->real_escape_string($id);
+    $user_rows = $db->query("SELECT * FROM users WHERE uid='$uid'");
+    $user_row = $user_rows->fetch_assoc();
+    $user['pic'] = $user_row['pic'];
+    $user['bio'] = $user_row['bio'];
+    $user['name'] = $user_row['name'];
+    $user['last'] = $user_row['last_seen'];
+    $user['id'] = $uid;
+    return $user;
+  }
   function userExists($id) {
     global $db;
     $uid = $db->real_escape_string($id);

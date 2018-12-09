@@ -19,7 +19,7 @@
       die();
     }
   }
-  $user = getUserBySID();
+  $user = getUserByUID($load);
 ?>
 <html>
   <head>
@@ -68,8 +68,12 @@
       <tr>
         <td valign="top" width="15%">
           <img width="100%" src="<?php echo $user['pic']; ?>">
+          <br>
+          <h3><?php echo $user['name']; ?></h3>
+          <br>
+          <em><?php echo $user['bio']?></em>
         </td>
-        <td>
+        <td valign="top">
           <table border="1px" width="100%" id="yeets">
           </table>
         </td>
