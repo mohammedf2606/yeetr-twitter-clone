@@ -15,26 +15,21 @@
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a><!-- Source: cooltext -->
     <form>
-      Search:<br>
+      Search:
+      <br>
       <input id="inputField" type="text"  name="search" placeholder="Search users" size=100>
       <button id ="search" onclick="search()"> Search! </button>
     </form>
     <center>
-      <button id="newYeet" onclick="goToYeet()"> New Yeet :) </button>
+      <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
     </center>
     <script>
-      function search() {
-        console.log("Searching");
-      };
-      function goToYeet() {
-        window.location.replace("../yeet");
-      };
       $(function() {
         loadYeets();
       });
       setInterval(function() {
         loadYeets();
-	  }, 2000);
+	    }, 2000);
       function loadYeets() {
         $.ajax({
           type: "GET",

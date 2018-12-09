@@ -37,7 +37,7 @@
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <center>
-      <a href="http://yeetr.me/yeet/"><button id="newYeet"> New Yeet :) </button></a>
+      <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
     </center>
     <p></p>
 
