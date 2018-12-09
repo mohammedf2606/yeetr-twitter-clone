@@ -70,7 +70,8 @@
     </script>
     <table width="100%">
       <tr>
-        <td width="20%">
+        <td width="15%">
+          <img width="100%" src="<?php echo $user['pic']; ?>">
         </td>
         <td>
           <table border="1px" width="100%" id="yeets">
