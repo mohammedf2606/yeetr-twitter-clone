@@ -112,7 +112,7 @@
           <p></p>
           <button onclick="update()">Update</button>
           <p></p>
-          <button onclick="logOut()">Log out</button>
+          <button id="logout" onclick="logOut()">Log out</button>
 
           <script>
             function update(){
@@ -138,6 +138,7 @@
                   location.reload(true);  
                 };
               });
+              document.getElementById("logout").value= "Confirm";
             }
           </script>
 <?php
