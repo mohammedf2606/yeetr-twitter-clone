@@ -6,14 +6,12 @@
     die();
   } else {
     $search = "%".strtolower($db->real_escape_string(urldecode($_GET['s'])))."%";
-    echo $search;
     if (strlen($search) == 0) {
       header('Location: http://yeetr.me/feed/');
       die();
     } else {
       $results = $db->query("SELECT * FROM users WHERE LOWER(name) LIKE '$search'");
       while ($user = $results->fetch_assoc()) {
-        echo "k";
         $u = array();
         $u['id'] = $user['uid'];
         $u['bio'] = $user['bio'];
@@ -40,7 +38,7 @@
     </div>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
-      <a href="http://yeetr.me/u/"+ <?php echo $user[id] ?>><button style="float:right;"> Profile </button></a>
+      <a href="http://yeetr.me/u/"+ <?php echo $user['id'] ?>><button style="float:right;"> Profile </button></a>
     </center>
     <br>
     <script>
@@ -56,6 +54,7 @@
     $yeetHtml .= "<td width=\"20%\"><a href=\"http://yeetr.me/u/" . $account['id'] . "\"><b class=\"name\">" . $account['name'] . "</b></a><br>";
     $yeetHtml .= "<label class=\"handle\">" . $account['id'] . "</label><br>";
     $yeetHtml .= "<label class=\"yeet\">" . $account['bio'] . "</label></td></tr>";
+    echo $yeetHtml;
   }
 ?>
     </table>

@@ -22,7 +22,7 @@
     </div>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
-      <a href="http://yeetr.me/u/"+ <?php echo $user[id] ?>><button style="float:right;"> Profile </button></a>
+      <a href="http://yeetr.me/u/"+ <?php echo $user['id'] ?>><button style="float:right;"> Profile </button></a>
     </center>
     <br>
     <script>
