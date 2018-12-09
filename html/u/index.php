@@ -105,7 +105,7 @@
           <textarea id="bio" rows=5 maxlength=512 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
           <p></p>
           <button onclick="update()">Update</button>
-          <br>
+          <p></p>
           <button onclick="logOut()">Log out</button>
           <script> 
             function update(){
