@@ -102,7 +102,7 @@
           <br>
           <h3>Bio:</h3>
           <p></p>
-          <textarea style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
+          <textarea rows=5 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
           <p></p>
           <button>Update</button>
 <?php
