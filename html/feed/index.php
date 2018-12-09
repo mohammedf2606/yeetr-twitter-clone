@@ -24,7 +24,7 @@
     <p id = "feed">
         <table border="1px" width="100%">
           <tr>
-            <td>
+            <td width="96px">
               <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
             </td>
             <td width="20%">
