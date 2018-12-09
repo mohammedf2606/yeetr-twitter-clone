@@ -30,7 +30,7 @@
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
     <center>
-      <button id="newYeet" href="http://yeetr.me/yeet/"> New Yeet :) </button>
+      <a href="http://yeetr.me/yeet/"><button id="newYeet"> New Yeet :) </button></a>
     </center>
     <p></p>
 
@@ -66,8 +66,8 @@
     </script>
     <table width="100%">
       <tr>
-        <td width="15%">
-          <img style="vertical-align:top" width="100%" src="<?php echo $user['pic']; ?>">
+        <td valign="top" width="15%">
+          <img width="100%" src="<?php echo $user['pic']; ?>">
         </td>
         <td>
           <table border="1px" width="100%" id="yeets">
