@@ -138,7 +138,6 @@
                   location.reload(true);  
                 };
               });
-              location.reload(true); 
             }
           </script>
 <?php
