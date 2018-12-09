@@ -48,7 +48,7 @@
       setInterval(function() {
         loadYeets();
       }, 2000);
-      function fToggle(caller) {
+      function fToggle() {
         $.ajax({
           type: "GET",
           url: "../endpoints/follow.php",
@@ -57,9 +57,9 @@
             var obj = JSON.parse(data);
             if (obj.status == 1) {
               if (obj.content == "Followed") {
-                $(caller).val("Unfollow");
+                $('#follow').text("Unfollow");
               } else {
-                $(caller).val("Follow");
+                $('#follow').text("Follow");
               }
             }
           }
@@ -103,7 +103,7 @@
 <?php
   } else if ($authed) {
 ?>
-          <button id="follow" onclick="fToggle(this)"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
+          <button id="follow" onclick="fToggle"><?php if ($follows) { echo "Unfollow"; } else { echo "Follow"; } ?></button>
 <?php
   }
 ?>
