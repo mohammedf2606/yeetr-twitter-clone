@@ -23,19 +23,18 @@
     </script>
     <p id = "feed">
         <table>
-            <tc>
-                <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
-            </tc>
-            <tc>
-                <tr>
-                    <b class = "name"><?php echo $user['name']; ?></b>
-                    <label class = "handle"> Handle </label>
-                    <label class = "time"> Time </label>
-                    <br>
-                        <label class = "yeet"> Yeet </label>
-                    </br>
-                </tr>
-            </tc>
+          <tr>
+            <td>
+              <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
+            </td>
+            <td>
+              <b class = "name"><?php echo $user['name']; ?></b>
+              <label class = "handle"> Handle </label>
+              <label class = "time"> Time </label>
+              <br>
+              <label class = "yeet"> Yeet </label>
+            </td>
+          </tr>
         </table>
     <script>
         var timeSent = 0;
