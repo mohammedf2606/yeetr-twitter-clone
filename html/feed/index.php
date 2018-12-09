@@ -17,15 +17,18 @@
     <form>
       Search:
       <br>
-      <input id="inputField" type="text"  name="search" placeholder="Search users" size=100>
-      <button id ="search" onclick="search()"> Search! </button>
+      <input id="search" type="text" placeholder="Search users" size=100>
+      <button onclick="search()"> Search! </button>
     </form>
     <center>
       <a href="http://yeetr.me/yeet/"><button> New Yeet :) </button></a>
       <a href="http://yeetr.me/u/"+ <?php echo $user[id] ?>><button style="float:right;"> Profile </button></a>
     </center>
-    <br>  
+    <br>
     <script>
+      function search() {
+        window.location.href = "http://yeetr.me/search/" + encodeURI($('#bio').val())
+      }
       $(function() {
         loadYeets();
       });
