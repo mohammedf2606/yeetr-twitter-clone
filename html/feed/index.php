@@ -28,12 +28,12 @@
               <img style="vertical-align:top" src="<?php echo $user['pic']; ?>">
             </td>
             <td>
-              <div style="vertical-align:top">
-                <b class = "name"><?php echo $user['name']; ?></b>
-                <label class = "handle"> Handle </label>
-                <label class = "time"> Time </label>
-              </div>
-                <label class = "yeet"> Yeet </label>
+              <b class = "name"><?php echo $user['name']; ?></b>
+              <label class = "handle"> Handle </label>
+              <label class = "time"> Time </label>
+            </td>
+            <td>
+              <label class = "yeet"> Yeet </label>
             </td>
           </tr>
         </table>
