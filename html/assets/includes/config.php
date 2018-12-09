@@ -13,7 +13,7 @@
 
   // site basics
   $conf_name = 'YEeTr';
-  $conf_refresh = false;
+  $conf_refresh = true;
 
   // basic function
   function isLoggedIn() {
