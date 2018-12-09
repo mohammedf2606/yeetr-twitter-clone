@@ -27,8 +27,7 @@
     <br>
     <script>
       function notsearch() {
-        console.log("test");
-        alert( "http://yeetr.me/search/" + encodeURI($('#search').val()));
+        window.location = "http://yeetr.me/search/" + encodeURI($('#search').val());
       }
       $(function() {
         loadYeets();
