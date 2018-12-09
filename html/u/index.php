@@ -33,7 +33,7 @@
     <title>User - <?php echo $conf_name; ?></title>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="<?php echo $client_id; ?>">
   </head>
   <body>
@@ -44,14 +44,12 @@
     <p></p>
 
     <script>
+      var auth2;
       $(function() {
         loadYeets();
-      });
-      var auth2;
-      function init() {
         gapi.load('auth2', function() { });
         auth2 = gapi.auth2.init({clientId: "<?php echo $client_id; ?>"});
-      }
+      });
 
       function logOut() {
         auth2.signOut().then(function () {
