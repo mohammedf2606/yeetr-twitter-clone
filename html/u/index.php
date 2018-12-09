@@ -46,8 +46,10 @@
     <script>
       $(function() {
         loadYeets();
-        gapi.load('auth2', function() { });
       });
+      function init() {
+        gapi.load('auth2', function() { });
+      }
       setInterval(function() {
         loadYeets();
       }, 2000);
