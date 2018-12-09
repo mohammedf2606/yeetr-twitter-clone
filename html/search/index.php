@@ -6,6 +6,7 @@
     die();
   } else {
     $search = "%".strtolower($db->real_escape_string(urldecode($_GET['s'])))."%";
+    echo $search;
     if (strlen($search) == 0) {
       header('Location: http://yeetr.me/feed/');
       die();
