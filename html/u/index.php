@@ -97,13 +97,13 @@
   if ($currentUser == $load) {
 ?>
           <h3>Name:</h3>
-          <br>
+          <p></p>
           <input width="100%" type="text" id="name" value="<?php echo $user['name']; ?>">
           <br>
           <h3>Bio:</h3>
-          <br>
+          <p></p>
           <textarea rows=5 style="width: 100%; resize: vertical;"><?php echo $user['bio']?></textarea>
-          <br>
+          <p></p>
           <button>Update</button>
 <?php
   } else {
