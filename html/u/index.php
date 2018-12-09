@@ -35,7 +35,7 @@
 
     <script>
 
-      console.log("hello" + "<?php echo $user['bio']; ?>");
+      console.log("hello" + "<?php echo $user['id']; ?>");
 
       function goToYeet() {
         window.location.replace("../yeet");
