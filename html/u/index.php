@@ -19,7 +19,7 @@
       die();
     }
   }
-  $user = getUserBySID();
+  $user = getUserByUID($load);
 ?>
 <html>
   <head>
