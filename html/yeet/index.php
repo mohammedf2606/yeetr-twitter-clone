@@ -26,7 +26,6 @@
         document.getElementById("yeet").disabled = true;
         var textInput = $('#yeetInput').val();
         if (textInput != "") {
-          console.log(textInput);
           $.ajax({
             type: "POST",
             url: "../endpoints/yeet.php",
@@ -37,7 +36,7 @@
             }
           });
         } else {
-          console.log("no input found :(");
+          alert("no input found :(");
         }
         document.getElementById("yeet").disabled = false;
       }
