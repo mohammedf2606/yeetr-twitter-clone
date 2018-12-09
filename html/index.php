@@ -1,6 +1,5 @@
 <?php
   include("assets/includes/config.php");
-
   if (isLoggedIn()) {
     header('Location: http://yeetr.me/feed');
     die();
@@ -29,8 +28,6 @@
             location.reload(true);
           }
         };
-
-
       };
     </script>
   </body>

@@ -1,8 +1,5 @@
 <?php
   include("../assets/includes/config.php");
-  if (!isLoggedIn()) {
-    die("{\"status\":0,\"content\":\"Not authorised\"}");
-  }
   if (!isset($_GET['user'])) {
     die("{\"status\":0,\"content\":\"No user specified\"}");
   }
