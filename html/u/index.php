@@ -33,6 +33,8 @@
     <title>User - <?php echo $conf_name; ?></title>
     <link type="text/css" rel="stylesheet" href="../assets/css/master.css<?php if ($conf_refresh) { echo "?t=".strval(time()); } ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="<?php echo $client_id; ?>">
   </head>
   <body>
     <a href="http://yeetr.me/feed"><img src="/assets/img/logo.gif" alt="YEET"></a> <!-- Source: cooltext -->
@@ -107,6 +109,7 @@
           <button onclick="update()">Update</button>
           <p></p>
           <button onclick="logOut()">Log out</button>
+
           <script> 
             function update(){
               var newName = $('#name').val();
@@ -122,7 +125,10 @@
             }
 
             function logOut(){
-              console.log("Attempting to log out");
+              var auth2 = gapi.auth2.getAuthInstance();
+              auth2.signOut().then(function () {
+              console.log('User signed out.');
+              });
             }
           </script>
 <?php
