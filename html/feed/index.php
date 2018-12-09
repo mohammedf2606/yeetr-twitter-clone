@@ -39,7 +39,7 @@
               $.each(obj.content, function(index, value) {
                 var yeetHtml = "<tr><td width=\"96px\">";
                 yeetHtml += "<a href=\"http://www.yeetr.me/u/"+ value.user.id +"\"><img style=\"vertical-align:top\" src=\"" + value.user.pic + "\"></a></td>";
-                yeetHtml += "<td width=\"20%\"><b class=\"name\">" + value.user.name + "</b><br>";
+                yeetHtml += "<td width=\"20%\"><a href=\"\"http://www.yeetr.me/u/"+ value.user.id+\"><b class=\"name\">" + value.user.name + "</b></a><br>";
                 yeetHtml += "<label class=\"handle\">" + value.user.id + "</label><br>";
                 yeetHtml += "<label class=\"time\">Posted " + value.time + " seconds ago</label></td><td>";
                 yeetHtml += "<label class=\"yeet\">" + value.body + "</label></td></tr>";
