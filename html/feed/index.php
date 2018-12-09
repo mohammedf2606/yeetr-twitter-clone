@@ -21,9 +21,12 @@
       function goToYeet() {
         window.location.replace("../yeet");
       }
+      $(function() {
+        loadYeets();
+      });
       setInterval(function() {
         loadYeets();
-	  }, 3000);
+	  }, 2000);
       function loadYeets() {
         $.ajax({
           type: "GET",
