@@ -6,6 +6,10 @@ b.name {
     color: #000000;
 }
 
+form.a {
+    float: right;
+}
+
 label.yeet {
     vertical-align: bottom;
 }
