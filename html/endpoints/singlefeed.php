@@ -8,7 +8,7 @@
     die("{\"status\":0,\"content\":\"User doesn't exist\"}");
   }
   $user_cache = array();
-  $yeets = $db->query("SELECT * FROM yeets WHERE uid='$uid'") or die("{\"status\":0,\"content\":\"Failed to fetch yeets\"}");
+  $yeets = $db->query("SELECT * FROM yeets WHERE uid='$uid' ORDER BY time DESC") or die("{\"status\":0,\"content\":\"Failed to fetch yeets\"}");
   $body = array();
   $body['status'] = 1;
   $body['content'] = array();

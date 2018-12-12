@@ -52,9 +52,9 @@
   foreach ($accounts as $account) {
     $yeetHtml = "<tr><td width=\"96px\">";
     $yeetHtml .= "<a href=\"http://yeetr.me/u/". $account['id'] . "\"><img style=\"vertical-align:top\" src=\"" . $account['pic'] . "\"></a></td>";
-    $yeetHtml .= "<td width=\"20%\"><a href=\"http://yeetr.me/u/" . $account['id'] . "\"><b class=\"name\">" . $account['name'] . "</b></a><br>";
+    $yeetHtml .= "<td width=\"20%\"><a href=\"http://yeetr.me/u/" . $account['id'] . "\"><b class=\"name\">" . htmlspecialchars($account['name']) . "</b></a><br>";
     $yeetHtml .= "<label class=\"handle\">" . $account['id'] . "</label></td><td>";
-    $yeetHtml .= "<label class=\"yeet\">" . $account['bio'] . "</label></td></tr>";
+    $yeetHtml .= "<label class=\"yeet\">" . htmlspecialchars($account['bio']) . "</label></td></tr>";
     echo $yeetHtml;
   }
 ?>
